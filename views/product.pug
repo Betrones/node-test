@@ -17,7 +17,7 @@ block content
 
 			.row
 				.col-md-5.d-flex
-					img(style="max-width: 100%" src="https://cdn.discordapp.com/attachments/756099827649085482/836968959407947776/detail-3-gray.jpeg")
+					img(style="max-width: 100%; max-height: 100%;" src="https://cdn.discordapp.com/attachments/756099827649085482/836968959407947776/detail-3-gray.jpeg")
 				.col-md-5.mx-auto.d-flex.flex-column
 					h2.title.mb-3 Shirts
 					.stats.mb-3.d-flex
@@ -48,10 +48,10 @@ block content
 						//- </div>
 
 						select.form-select(aria-label='Default select example')
-							option(selected) Open this select menu
-							option(value='1') One
-							option(value='2') Two
-							option(value='3') Three
+							option(selected) Выберите размер
+							option(value='1') L
+							option(value='2') M
+							option(value='3') S
 
 
 					.type.mb-3
@@ -59,12 +59,17 @@ block content
 							strong.type-title
 								|Title
 								.small.text-muted (required)
-						.d-flex
-							.btn.rounded-0.border.border-3.py-1.px-2(style="color: #bdae7a; border-color: #bdae7a !important") Hoodie
-							.btn.rounded-0.border.border-3.py-1.px-2(style="color: #bdae7a; border-color: #bdae7a !important") College
+						.form-check
+							input#extraPrint.form-check-input(type='checkbox' value='extraPrintValue')
+							label.form-check-label(for='extraPrint')
+							| Принт
+						.form-check
+							input#extraFood.form-check-input(type='checkbox' value='extraFoodValue' checked='')
+							label.form-check-label(for='extraFood')
+							| Обед к заказу
 
-					.carts.d-flex
-						.border.border-2.px-3.py-2 1
-						.carder.mx-auto.w-100.d-flex.justify-content-center.align-items-center(style="color: #fff; background: #1b2024") add to cart
+
+					button.btn.carder.mx-auto.w-100.d-flex.justify-content-center.align-items-center(style="color: #fff; background: #008000") Add to cart
+					button.btn.carder.mx-auto.w-100.d-flex.justify-content-center.align-items-center(style="color: #0645AD;") Add to favourite
 
 	
