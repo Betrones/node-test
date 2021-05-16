@@ -1,0 +1,43 @@
+extends base.pug
+block content
+
+	section.p-5.mb-5.bg-light.rounded-3
+		.container-fluid.py-5
+			h1.display-5.fw-bold= title
+			p.col-md-8.fs-4.pl-0= message
+			button.btn.btn-primary.btn-lg tut nikogo net
+	section
+		.container  
+			h2.text-ceneter Лучшие игры:
+			.row
+				each product in products
+					+product-card(product)
+	section
+		.container.py-5(id="featured-3")
+			h2.pb-2.border-bottom= featuresTitle
+			.row.g-5.py-5
+				each feature in features
+					+feature-card(feature)
+
+	section
+		.container.py-5
+			h2.pb-2.border-bottom Pfrfpfnm j,hfnysq pdjyjr
+			.mb-3
+				label(for="exampleFormControlInput1" class="form-label") Имя и фамилия
+				input(type="text" class="form-control" id="exampleFormControlInput1 name" placeholder="Иван Иванов")
+			.mb-3
+				label(for="exampleFormControlInput1" class="form-label") Почта
+				input(type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com")
+			.mb-3
+				label(for="exampleFormControlInput1" class="form-label") Телефон
+				input(type="email" class="form-control" id="exampleFormControlInput1" placeholder="+7 (880)555 35-35")
+			button.btn.btn-primary.py-2 Отправить заявку
+
+	// section.mt-5(style="margin-bottom: 200px;")
+	// 	.container.row.justify-content-center
+	// 		form.col-md-5
+	// 			.mb-3
+	// 				label.form-label(for="name") Имя и фамилия
+	// 				input.form-control(type)
+
+	include partials/call.pug

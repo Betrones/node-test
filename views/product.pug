@@ -1,0 +1,70 @@
+extends base.pug
+block content
+	//- style
+	//-   .carter{
+	//-     color: #fff;
+	//-     background: #1b2024;
+	//-   }
+	section.product.mt-4
+		.container(style="background: #fff")
+			nav(aria-label='breadcrumb')
+				ol.breadcrumb
+					li.breadcrumb-item
+						a(href='/') Home
+					li.breadcrumb-item
+						a(href='#') Shirts
+					li.breadcrumb-item.active(aria-current='page') Shirt
+
+			.row
+				.col-md-5.d-flex
+					img(style="max-width: 100%" src="https://cdn.discordapp.com/attachments/756099827649085482/836968959407947776/detail-3-gray.jpeg")
+				.col-md-5.mx-auto.d-flex.flex-column
+					h2.title.mb-3 Shirts
+					.stats.mb-3.d-flex
+						.pricing
+							.price.d-flex
+								h3 
+									| 65$
+									del.small.text-muted 90$
+						.rating.d-flex
+							.rating-mark here are 4 stars, ok?
+							.rating-revievs 25 revievs
+
+					p.text-muted= message
+					.sizes
+						.sizer.d-flex
+							strong.size-title 
+								|Size
+								.small.text-muted (recuired)
+						//- <div class="dropdown">
+						//-   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+						//-     Dropdown button
+						//-   </button>
+						//-   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+						//-     <li><a class="dropdown-item" href="#">Action</a></li>
+						//-     <li><a class="dropdown-item" href="#">Another action</a></li>
+						//-     <li><a class="dropdown-item" href="#">Something else here</a></li>
+						//-   </ul>
+						//- </div>
+
+						select.form-select(aria-label='Default select example')
+							option(selected) Open this select menu
+							option(value='1') One
+							option(value='2') Two
+							option(value='3') Three
+
+
+					.type.mb-3
+						.typer.d-flex
+							strong.type-title
+								|Title
+								.small.text-muted (required)
+						.d-flex
+							.btn.rounded-0.border.border-3.py-1.px-2(style="color: #bdae7a; border-color: #bdae7a !important") Hoodie
+							.btn.rounded-0.border.border-3.py-1.px-2(style="color: #bdae7a; border-color: #bdae7a !important") College
+
+					.carts.d-flex
+						.border.border-2.px-3.py-2 1
+						.carder.mx-auto.w-100.d-flex.justify-content-center.align-items-center(style="color: #fff; background: #1b2024") add to cart
+
+	
